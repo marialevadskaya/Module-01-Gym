@@ -17,6 +17,9 @@
             <div class="header">
                 <div class="header-item">
                     <a href="#" class="header-logo"></a>
+                    <div class="header-burger">
+                        <button class="burger" onclick="openModal()"></button>
+                    </div>
                     <nav>
                         <ul class="header-nav">
                             <li><a href="#events">Мероприятия</a></li>
@@ -64,9 +67,10 @@
                     <div class="menu-marathon-item">
                         <div class="menu-marathon-gradient">
                             <p class="date">29.06 - 4.07</p>
-                            <h3>Марафон выносливости</h3>
+                            <h3>Марафон<br>выносливости</h3>
                             <a href="#" class="menu-marathon-button">Учавствовать</a>
                             <p class="type">марафон</p>
+                            <button type="button" class="button-plus"></button>
                         </div>
                     </div>
                     <div class="menu-marathon-item">
@@ -75,6 +79,7 @@
                             <h3>Как стать<br>тренером?</h3>
                             <a href="#" class="menu-marathon-button">Учавствовать</a>
                             <p class="type">вебинар</p>
+                            <button type="button" class="button-plus"></button>
                         </div>
                     </div>
                     <div class="menu-marathon-item">
@@ -83,6 +88,7 @@
                             <h3>Йога, как стиль<br>жизни</h3>
                             <a href="#" class="menu-marathon-button">Учавствовать</a>
                             <p class="type">вебинар</p>
+                            <button type="button" class="button-plus"></button>
                         </div>
                     </div>
                 </div>
@@ -234,6 +240,23 @@
             </div>
         </div>
     </footer>
+    <div class="modal" id="modal">
+        <div class="container">
+            <a href="#" class="header-logo"></a>
+            <button class="burger-close" onclick="closeModal()"></button>
+            <nav>
+                <ul class="header-nav">
+                    <li class="list-item"><a href="#events">Мероприятия</a></li>
+                    <li class="list-item"><a href="#timetable">Расписание</a></li>
+                    <li><a href="#about">О компании</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" class="icon-left"></a>
+                <a href="#" class="icon-right"></a>
+            </div>
+        </div>
+    </div>
     <script>
     
     // Smooth Scroll
@@ -252,6 +275,16 @@
         behavior: "smooth"
     });
     }
+
+    // Menu
+
+    function openModal() {
+           document.getElementById("modal").style.top = "0px";
+        }
+
+       function closeModal() {
+           document.getElementById("modal").style.top = "-400px";
+        }
     </script>   
 </body>
 </html>

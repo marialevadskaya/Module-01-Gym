@@ -92,7 +92,7 @@ body {
 }
 h1 {
     font-size: 48px;
-    line-height: 60px;
+    line-height: 1.25;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 44px;
@@ -107,7 +107,7 @@ h1 {
 }
 .banner-description {
     font-size: 18px;
-    line-height: 27px;
+    line-height: 1.5;
     margin-bottom: 57px;
     max-width: 297px;
 }
@@ -229,11 +229,28 @@ h3 {
 }
 .menu-marathon-item {
     flex: 0 0 auto;
-    width: 368px;
-    height: 598px;
+    width: 32%;
+    height: 49vw;
+}
+.menu-marathon-item:nth-child(1) {
     background-image: url(..//images/maraphon.png);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.menu-marathon-item:nth-child(2) {
+    background-image: url(..//images/vebinar.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.menu-marathon-item:nth-child(3) {
+    background-image: url(..//images/yoga.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     position: relative;
 }
 .menu-marathon-gradient {
@@ -241,12 +258,6 @@ h3 {
     position: absolute;
     width: 100%;
     height: 100%;
-}
-.menu-marathon .menu-marathon-item:nth-child(2) {
-    background-image: url(..//images/vebinar.png);
-}
-.menu-marathon .menu-marathon-item:nth-child(3) {
-    background-image: url(..//images/yoga.jpg);
 }
 .menu-marathon-gradient:hover {
     background: linear-gradient(180deg, rgba(251, 241, 56, .6) 0%, rgba(253, 249, 182, 0) 100%);
@@ -514,7 +525,7 @@ h4 {
     border-radius: 2px;
     border: 2px solid #2B3541;
  }
- .checkbox:checked + label::after{
+.checkbox:checked + label::after{
     content:'';
     position: absolute;
     width: 17px;
@@ -527,8 +538,8 @@ h4 {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(..//images/svg/vector.svg);
- }
- .checkbox:not(:checked) + label::before{
+}
+.checkbox:not(:checked) + label::before{
     content:'';
     position: absolute;
     width: 16px;
@@ -538,8 +549,8 @@ h4 {
     background-color: transparent;
     border-radius: 2px;
     border: 2px solid #2B3541;
- }
- .checkbox:not(:checked) + label::after{
+}
+.checkbox:not(:checked) + label::after{
     content:'';
     position: absolute;
     width: 17px;
@@ -553,8 +564,8 @@ h4 {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(..//images/svg/vector.svg);
- }
- .radio:checked + label::before{
+}
+.radio:checked + label::before{
    border-radius: 100%;
 }
 #about {
@@ -713,5 +724,227 @@ footer {
 }
 .footer-rights a:hover {
     opacity: 1;
+}
+
+/* Modal */
+
+.burger {
+    width: 29px;
+    height: 22px;
+    background-image: url(..//images/svg/burger-1.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background-position: contain;
+    margin-left: 57px;
+}
+.modal {
+    background-color: #F3F3F3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 30px 10px 20px 10px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+.modal .header-logo {
+    width: 78px;
+    height: 24px;
+    margin-bottom: 40px;
+}
+.burger-close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url(..//images/svg/close.svg);
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    top: 4px;
+    right: 0;
+    cursor: pointer;
+}
+.modal .header-nav {
+    flex-direction: column;
+    gap: 40px;
+    font-size: 16px;
+    margin-bottom: 40px;
+    padding-left: 0;
+}
+.list-item {
+    border-bottom: 1px solid rgba(43, 53, 65, .2);
+    padding-bottom: 20px;
+}
+.modal .header-icons {
+    position: absolute;
+    bottom: -40px;
+    right: 0;  
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1100px;
+    }
+    .banner-bg {
+        max-width: 770px;
+    }
+    .banner-bg-img {
+        width: 910px;
+        height: 808px;
+        right: -80px;
+    }
+}
+@media (min-width: 1113px) {
+    .burger {
+        display: none;
+    }
+    .header-nav {
+        display: visible;
+    }
+    .button-plus {
+        display: none;
+    }
+}
+@media (max-width: 1112px) {
+    .burger {
+        display: visible;
+    }
+    .header .header-nav {
+        display: none;
+    }
+    .container {
+        max-width: 748px;
+    }
+    .header {
+        padding-top: 30px;
+        margin-bottom: 27px;
+    }
+    .header-logo {
+        width: 78px;
+        height: 24px;
+    }
+    .icon-left,
+    .icon-right {
+        width: 26px;
+        height: 26px;
+    }
+    .banner {
+        margin-bottom: 60px;
+    }
+    .banner-box {
+        padding-top: 26px;
+    }
+    h1 {
+        font-size: 26px;
+        max-width: 358px;
+        margin-bottom: 40px;
+    }
+    .banner-subtitle {
+        font-size: 26px;
+        margin-bottom: 16px;
+    }
+    .banner-info {
+        margin-left: 0;
+    }
+    .banner-description {
+        font-size: 16px;
+        margin-bottom: 41px;
+    }
+    .banner-arrow-down {
+        width: 40px;
+        height: 40px;
+        margin-top: 47px
+    }
+    .banner-bg {
+        max-width: 360px;
+        max-height: 429px;
+        right: 0;
+    }
+    .banner-bg-img {
+        width: 399px;
+        height: 364px;
+        right: 0;
+        top: 26px;
+    }
+    h2 {
+        font-size: 26px;
+    }
+    .menu-marathon {
+      flex-wrap: wrap;
+      gap: 10px;
+
+    }
+    .menu-marathon-item:nth-child(1) {
+        width: 48%;
+    }
+    .menu-marathon-item:nth-child(2) {
+        width: 48%;
+    }
+    .menu-marathon-item:nth-child(3) {
+        background-image: url(..//images/yoga-2.png);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+    }
+    .date {
+        font-size: 12px;
+        padding-top: 20px;
+        padding-left: 27px;
+        margin-bottom: 16px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    .type {
+        font-size: 12px;
+        padding: 6px 15px;
+        left: 0;
+        right: auto;
+    }
+    .button-plus {
+        display: visible;
+        width: 30px;
+        height: 30px;
+        background-image: url(..//images/svg/add.svg);
+        background-repeat: no-repeat;
+        background-position: contain;
+        border: none;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        cursor: pointer;
+    }
+    #events {
+        margin-bottom: 60px;
+    }
+    .timetable-header-date {
+        font-size: 16px;
+        opacity: .7;
+    }
+    .timetable-grid-item {
+        padding-left: 23px;
+    }
+    .timetable-date {
+        font-size: 16px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+    .timetable-content p {
+        font-size: 12px;
+    }
+    .about-description {
+        font-size: 16px;
+    }
+    .about-image {
+        width: 372px;
+        height: 227px;
+    }
+  
 }
 
