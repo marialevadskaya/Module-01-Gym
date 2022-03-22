@@ -98,7 +98,7 @@
                     <div class="timetable-grid-item item-1">
                         <p class="timetable-date">22 июня, 10:00</p>
                         <div class="timetable-content">
-                            <img class='timetable-grid-image-1' src="images/body.svg" alt="body">
+                            <img class='timetable-grid-image-1' src="images/svg/body.svg" alt="body">
                             <h4>Функциональный тренинг</h4>
                             <p class="timetable-text-hidden">Улучшаем силу, выносливость и&nbsp;гибкость</p>
                         </div>
@@ -106,7 +106,7 @@
                     <div class="timetable-grid-item item-2">
                         <p class="timetable-date">24 июня, 10:00</p>
                         <div class="timetable-content">
-                            <img class='timetable-grid-image-2' src="images/bottle.svg" alt="body">
+                            <img class='timetable-grid-image-2' src="images/svg/bottle.svg" alt="body">
                             <h4>Body sculpt</h4>
                             <p class="timetable-text-hidden">Улучшаем работу органов дыхания, укрепляем суставы и&nbsp;позвоночник</p>
                         </div>
@@ -114,7 +114,7 @@
                     <div class="timetable-grid-item item-3">
                         <p class="timetable-date">26 июня, 11:00</p>
                         <div class="timetable-content">
-                            <img class='timetable-grid-image-3' src="images/dumbbell.svg" alt="body">
+                            <img class='timetable-grid-image-3' src="images/svg/dumbbell.svg" alt="body">
                             <h4>L.A.B.</h4>
                             <p class="timetable-text-hidden">Сочетание нагрузок разной сложности и интенсивности для каждого</p>
                         </div>
@@ -122,7 +122,7 @@
                     <div class="timetable-grid-item active">
                         <p class="timetable-date">23 июня, 10:00</p>
                         <div class="timetable-content">
-                            <img class='timetable-grid-image-4' src="images/jump.svg" alt="body">
+                            <img class='timetable-grid-image-4' src="images/svg/jump.svg" alt="body">
                             <h4>Силовой микс</h4>
                             <p class="timetable-item-text">Упражнения помогут создать красивый рельеф и прийти в спортивную форму.</p>
                         </div>
@@ -130,7 +130,7 @@
                     <div class="timetable-grid-item item-5">
                         <p class="timetable-date">25 июня, 11:00</p>
                         <div class="timetable-content">
-                            <img class='timetable-grid-image-5' src="images/heart.svg" alt="body">
+                            <img class='timetable-grid-image-5' src="images/svg/heart.svg" alt="body">
                             <h4>Дыхательные практики</h4>
                             <p class="timetable-text-hidden">Упражнения, направленные на&nbsp;укрепление здоровья и&nbsp;поднятия тонуса организма</p>
                         </div>
@@ -138,7 +138,7 @@
                     <div class="timetable-grid-item item-6">
                         <p class="timetable-date">27 июня, 10:00</p>
                         <div class="timetable-content">
-                            <img class='timetable-grid-image-6' src="images/weight.svg" alt="body">
+                            <img class='timetable-grid-image-6' src="images/svg/weight.svg" alt="body">
                             <h4>Комплексная разминка</h4>
                             <p class="timetable-text-hidden">Комплекс упражнений для подготовки тела к более интенсивной физической нагрузке</p>
                         </div>
@@ -236,14 +236,12 @@
     </footer>
     <script>
     
-    //Button Up
+    // Smooth Scroll
+        
+    const links = document.querySelectorAll(".header-nav a, .footer-nav a, banner-arrow-down");
 
-        window.onscroll = function(){scrollFunction()};
-
-    const upbuttons = document.querySelectorAll(".button-up");
-
-    for (const upbutton of upbuttons) {
-        upbutton.addEventListener("click", clickHandler);
+    for (const link of links) {
+    link.addEventListener("click", clickHandler);
     }
 
     function clickHandler(e) {
@@ -254,14 +252,6 @@
         behavior: "smooth"
     });
     }
-
-function scrollFunction(){
-    if ( document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
-        document.getElementById('btnUp').className = 'button-up visible';
-    } else {
-        document.getElementById('btnUp').className = 'button-up hidden';
-    }
-}
     </script>   
 </body>
 </html>
