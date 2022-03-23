@@ -133,7 +133,7 @@ h1 {
     display: block;
     width: 52px;
     height: 55px;
-    margin-top: 200px;
+    margin-top: 206px;
     background-image: url(..//images/svg/arrow.svg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -170,7 +170,7 @@ h1 {
     position: absolute;
     top: 30px;
     width: 996px;
-    height: 805px;
+    height: 810px;
     right: -110px;
 }
 #events {
@@ -218,7 +218,7 @@ h3 {
     font-weight: 400;
     font-size: 18px;
     background-color: #FBF138;
-    padding: 12px 20px;
+    padding: 14px 18px;
     margin-bottom: 0;
 }
 .menu-marathon {
@@ -230,7 +230,7 @@ h3 {
 .menu-marathon-item {
     flex: 0 0 auto;
     width: 32%;
-    height: 49vw;
+    height: 597px;
 }
 .menu-marathon-item:nth-child(1) {
     background-image: url(..//images/maraphon.png);
@@ -243,7 +243,7 @@ h3 {
     background-image: url(..//images/vebinar.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center 28%;
     position: relative;
 }
 .menu-marathon-item:nth-child(3) {
@@ -415,8 +415,10 @@ h4 {
     margin-bottom: 120px;
 }
 .form-box {
-    max-width: 617px;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
+    max-width: 617px;
     padding-top: 48px;
     padding-bottom: 80px;
 }
@@ -433,14 +435,13 @@ h4 {
     height: 53px;
     border-radius: 50px;
     z-index: -1;
-    left: -18px;
-    top: -22px;
+    left: -20px;
+    top: 15px;
     box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
 }
 .form-email {
     display: flex;
     gap: 20px;
-    margin-left: 12px;
 }
 .input-email {
     display: block;
@@ -456,6 +457,7 @@ h4 {
   }
 .input-email:focus {
     outline: none;
+    border: 1px solid #fbf138;
  }
 .input-email:disabled {
     border: 1px solid #F3F3F3;
@@ -492,7 +494,7 @@ h4 {
 .checkbox:checked + label,
 .checkbox:not(:checked) + label {
     position: relative;
-    padding-left: 38px;
+    padding-left: 28px;
     cursor: pointer;
 }
 .agreement-label {
@@ -520,7 +522,7 @@ h4 {
     position: absolute;
     width: 16px;
     height: 16px;
-    left:12px;
+    left: 0;
     top:calc(50% - 12px);
     border-radius: 2px;
     border: 2px solid #2B3541;
@@ -532,7 +534,7 @@ h4 {
     height: 17px;
     transition: all .2s ease;
     opacity: 1;
-    left: 13px;
+    left: 1px;
     top: calc(50% - 11px);
     background-color: #2B3541;
     background-size: cover;
@@ -544,7 +546,7 @@ h4 {
     position: absolute;
     width: 16px;
     height: 16px;
-    left:12px;
+    left: 0;
     top:calc(50% - 12px);
     background-color: transparent;
     border-radius: 2px;
@@ -557,7 +559,7 @@ h4 {
     height: 17px;
     transition: all .2s ease;
     opacity: 0;
-    left: 13px;
+    left: 1px;
     top: calc(50% - 11px);
     background-position: 0 -12px;
     background-color: transparent;
@@ -570,29 +572,22 @@ h4 {
 }
 #about {
     padding-top: 40px;
-    margin-bottom: 150px;
+    margin-bottom: 60px;
 }
 .about-box {
-    display: flex;
-    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 336px 203px;
+    gap: 20px;
+    row-gap: 84px;
 }
 .about-text {
-    flex-basis: 50%;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
 }
 .about-title {
-    margin: 0;
-}
-.about-image {
-    position: relative;
-    flex-basis: 50%;
-}
-.about-gradient {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0.45) 100%);
-    top: 0;
-    left: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 .about-description {
     font-weight: 400;
@@ -619,25 +614,41 @@ h4 {
     transition: .3s;
     box-shadow: 0px 13px 24px rgba(70, 86, 106, 0.2);
 }
-.about-advantages {
-    display: flex;
-    gap: 67px;
-}
 .about-item-description {
-    font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
     opacity: .6;
-    margin-top: 20px;
+}
+.about-image {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+    background-image: url(..//images/trainer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 580px;
+    width: 100%;
+    height: 335px;
+}
+.about-advantages {
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+    display: flex;
+    gap: 58px;
+    flex-wrap: nowrap;
 }
 footer {
     background-color: #F3F3F3;
 }
 .footer {
-    display: flex;
-    justify-content: space-between;
+    display: block;
     padding-top: 39px;
     padding-bottom: 7px;
+}
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
 }
 .footer-item {
     display: flex;
@@ -696,7 +707,7 @@ footer {
 .footer-icons {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
     opacity: .8;
 }
 .footer-rights {
@@ -710,7 +721,7 @@ footer {
     color: #2B3541;
     opacity: .3;
 }
-.footer-right-right {
+.footer-rights-right {
     display: flex;
     gap: 2px;
     align-items: center;
@@ -809,6 +820,9 @@ footer {
     .button-plus {
         display: none;
     }
+    .agreement-adaptive {
+        display: none;
+    }
 }
 @media (max-width: 1112px) {
     .burger {
@@ -822,11 +836,14 @@ footer {
     }
     .header {
         padding-top: 30px;
-        margin-bottom: 27px;
+        margin-bottom: 34px;
     }
     .header-logo {
         width: 78px;
         height: 24px;
+    }
+    .header-icons {
+        gap: 21px;
     }
     .icon-left,
     .icon-right {
@@ -834,15 +851,15 @@ footer {
         height: 26px;
     }
     .banner {
-        margin-bottom: 60px;
+        margin-bottom: 46px;
     }
     .banner-box {
-        padding-top: 26px;
+        padding-top: 9px;
     }
     h1 {
         font-size: 26px;
         max-width: 358px;
-        margin-bottom: 40px;
+        margin-bottom: 46px;
     }
     .banner-subtitle {
         font-size: 26px;
@@ -853,12 +870,12 @@ footer {
     }
     .banner-description {
         font-size: 16px;
-        margin-bottom: 41px;
+        margin-bottom: 66px;
     }
     .banner-arrow-down {
         width: 40px;
         height: 40px;
-        margin-top: 47px
+        margin-top: 68px
     }
     .banner-bg {
         max-width: 360px;
@@ -867,23 +884,33 @@ footer {
     }
     .banner-bg-img {
         width: 399px;
-        height: 364px;
+        height: 322px;
         right: 0;
-        top: 26px;
+        top: auto;
+        bottom: 0;
+    }
+    #events {
+        margin-bottom: 37px;
     }
     h2 {
         font-size: 26px;
+        margin-bottom: 18px;
     }
     .menu-marathon {
       flex-wrap: wrap;
       gap: 10px;
-
+    }
+    .menu-marathon-item {
+        height: 28vw;
+    }
+    .menu-marathon-item:nth-child(3) {
+        height: 30vw;
     }
     .menu-marathon-item:nth-child(1) {
-        width: 48%;
+        width: 49%;
     }
     .menu-marathon-item:nth-child(2) {
-        width: 48%;
+        width: 49%;
     }
     .menu-marathon-item:nth-child(3) {
         background-image: url(..//images/yoga-2.png);
@@ -893,22 +920,29 @@ footer {
     }
     .date {
         font-size: 12px;
-        padding-top: 20px;
+        padding-top: 7px;
         padding-left: 27px;
-        margin-bottom: 16px;
+        margin-bottom: 15px;
     }
     h3 {
         font-size: 16px;
+        padding-left: 26px;
+    }
+    .menu-marathon-item:nth-child(3) .date {
+        padding-left: 22px;
+    }
+    .menu-marathon-item:nth-child(3) h3 {
+        padding-left: 22px;
     }
     .type {
         font-size: 12px;
-        padding: 6px 15px;
+        padding: 9px 15px;
         left: 0;
         right: auto;
     }
     .button-plus {
         display: visible;
-        width: 30px;
+        width: 32px;
         height: 30px;
         background-image: url(..//images/svg/add.svg);
         background-repeat: no-repeat;
@@ -919,8 +953,42 @@ footer {
         right: 0;
         cursor: pointer;
     }
-    #events {
-        margin-bottom: 60px;
+    #timetable {
+        margin-bottom: 96px;
+    }
+    .timetable-title {
+        margin-bottom: 38px;
+    }
+    .timetable-header-date {
+        padding-top: 16px;
+    }
+    .timetable-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 333px 224px 224px;
+    }
+    .timetable-grid-item:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .timetable-grid-item:nth-child(4) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    .timetable-grid-item:nth-child(2) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .timetable-grid-item:nth-child(5) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    .timetable-grid-item:nth-child(3) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    .timetable-grid-item:nth-child(6) {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
     }
     .timetable-header-date {
         font-size: 16px;
@@ -928,6 +996,18 @@ footer {
     }
     .timetable-grid-item {
         padding-left: 23px;
+        padding-right: 24px;
+        padding-top: 7px;
+    }
+    .timetable-grid-item .active p {
+        margin-bottom: 13px;
+        margin-top: 23px;
+    }
+    .timetable-grid-item .active img {
+        margin-bottom: 37px;
+    }
+    .timetable-item-text {
+        margin-bottom: 2px;
     }
     .timetable-date {
         font-size: 16px;
@@ -938,13 +1018,111 @@ footer {
     .timetable-content p {
         font-size: 12px;
     }
+    .subscribe {
+        margin-bottom: 54px;
+    }
+    .subscribe-bg {
+        height: 416px;
+    }
+    .form-box {
+        padding-top: 34px;
+    }
+    .form-header {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    .form-header::before {
+        width: 31px;
+        height: 31px;
+        left: -10px;
+        top: 10px;
+    }
+    .agreement {
+        display: none;
+    }
+    .agreement-adaptive {
+        display: visible;
+        margin-bottom: 32px;
+    }
+    .form-items {
+        margin: 0 auto;
+    }
+    .form-email {
+        flex-direction: column;
+        gap: 0;
+    }
+    .input-email {
+        width: 310px;
+        height: 65px;
+        padding: 0 15px;
+    }
+    #about {
+        margin-bottom: 153px;
+    }
+    .about-description {
+        margin-top: 15px;
+    }
+    .about-title {
+        margin-bottom: 0;
+    } 
+    .about-box {
+        row-gap: 0px;
+        grid-template-rows: 326px 148px;
+    }
     .about-description {
         font-size: 16px;
+        margin-bottom: 56px;
+    }
+    .about-link {
+        padding: 23px 47px;
     }
     .about-image {
-        width: 372px;
-        height: 227px;
+        height: 229px;
     }
-  
+    .about-item-description {
+        max-width: 210px;
+        font-size: 16px;
+    }
+    .about-advantages {
+        flex-wrap: wrap;
+    }
+    .about-advantages-item {
+        width: 42%;
+        height: 40%;
+    }
+    .footer-box {
+        display: block;
+    }
+    .footer-nav {
+        gap: 26px;
+    }
+    .footer-nav a {
+        font-size: 12px;
+    }
+    .footer-icons {
+        gap: 25px;
+    }
+    .footer-item:nth-child(1) {
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    .footer-item:nth-child(2){
+        justify-content: flex-end;
+        margin-bottom: 39px;
+    }
+    .footer-mail {
+        font-size: 12px;
+        padding-right: 33px;
+    }
+    .footer-rights p {
+        font-size: 10px;
+    }
+    .footer-rights-right a {
+        font-size: 10px;
+    }
+    .footer {
+        padding-top: 46px;
+        padding-bottom: 46px;
+    }
 }
 
