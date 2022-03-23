@@ -130,7 +130,7 @@
                         <div class="timetable-content">
                             <img class='timetable-grid-image-4' src="images/svg/jump.svg" alt="body">
                             <h4>Силовой микс</h4>
-                            <p class="timetable-item-text">Упражнения помогут создать красивый рельеф и прийти в спортивную форму.</p>
+                            <p class="timetable-item-text">Упражнения помогут создать<br>красивый рельеф и прийти<br>в спортивную форму.</p>
                         </div>
                     </div>
                     <div class="timetable-grid-item item-5">
@@ -162,6 +162,13 @@
                         <div class="form-items">
                             <form class="form-email">
                                 <input type="email" placeholder="Ваш e-mail" class="input-email">
+                                <div class="agreement-adaptive">
+                                    <input type="checkbox" id="01" class="checkbox">
+                                    <label for="01" class="agreement-label">
+                                        <p>Согласен с обработкой</p>
+                                        <a href="#" target="_blank">персональных данных</a>
+                                    </label>
+                                </div>
                                 <button type="submit" class="form-button">ПОДПИСАТЬСЯ</button>
                             </form>
                             <div class="agreement">
@@ -181,30 +188,27 @@
                 <div class="about-box">
                     <div class="about-text">
                         <h2 class="about-title">О компании</h2>
-                        <p class="about-description">Наша компания является одной из немногих, кто предлагает фитнес услуги онлайн! Оставайтесь с&nbsp;нами и вы сами увидите, что мы проводим не&nbsp;только онлайн-тренировки.</p>
+                        <p class="about-description">Наша компания является одной из&nbsp;немногих, кто предлагает фитнес услуги онлайн! Оставайтесь с&nbsp;нами и&nbsp;вы сами увидите, что мы проводим не&nbsp;только онлайн-тренировки.</p>
                         <a href="#" class="about-link">Записаться</a>
                     </div>
-                    <div class="about-image">
-                        <img src="images/trainer.png" alt="trainer">
-                        <div class="about-gradient"></div>
-                    </div>
-                </div>
-                <div class="about-advantages">
-                    <div class="about-advantages-item">
-                        <h4>Экономия времени</h4>
-                        <p class="about-item-description">Не нужно тратить время на дорогу</p>
-                    </div>
-                    <div class="about-advantages-item">
-                        <h4>Индивидуальный подход</h4>
-                        <p class="about-item-description">Внимание тренера пренадлежит только вам</p>
-                    </div>
-                    <div class="about-advantages-item">
-                        <h4>Экономия денег</h4>
-                        <p class="about-item-description">Средняя цена одной тренировки - 700₽</p>
-                    </div>
-                    <div class="about-advantages-item">
-                        <h4>Опытный персонал</h4>
-                        <p class="about-item-description">Стаж работы у наших тренеров от 5 лет</p>
+                    <div class="about-image"></div>
+                    <div class="about-advantages">
+                        <div class="about-advantages-item">
+                            <h4>Экономия времени</h4>
+                            <p class="about-item-description">Не нужно тратить время на дорогу</p>
+                        </div>
+                        <div class="about-advantages-item">
+                            <h4>Индивидуальный подход</h4>
+                            <p class="about-item-description">Внимание тренера пренадлежит только вам</p>
+                        </div>
+                        <div class="about-advantages-item">
+                            <h4>Экономия денег</h4>
+                            <p class="about-item-description">Средняя цена одной тренировки - 700₽</p>
+                        </div>
+                        <div class="about-advantages-item">
+                            <h4>Опытный персонал</h4>
+                            <p class="about-item-description">Стаж работы у наших тренеров от 5 лет</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -213,29 +217,31 @@
     <footer>
         <div class="container">
             <div class="footer">
-                <div class="footer-item footer-menu">
-                    <a href="#" class="footer-logo"></a>
-                    <nav>
-                        <ul class="footer-nav">
-                            <li><a href="#events">Мероприятия</a></li>
-                            <li><a href="#timetable">Расписание</a></li>
-                            <li><a href="#about">О компании</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="footer-item footer-social">
-                    <a href="mailto:info@freefit.com" class="footer-mail">info@freefit.com</a>
-                    <div class="footer-icons">
-                        <a href="#" class="icon-left"></a>
-                        <a href="#" class="icon-right"></a>
+                <div class="footer-box">
+                    <div class="footer-item">
+                        <a href="#" class="footer-logo"></a>
+                        <nav>
+                            <ul class="footer-nav">
+                                <li><a href="#events">Мероприятия</a></li>
+                                <li><a href="#timetable">Расписание</a></li>
+                                <li><a href="#about">О компании</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-item">
+                        <a href="mailto:info@freefit.com" class="footer-mail">info@freefit.com</a>
+                        <div class="footer-icons">
+                            <a href="#" class="icon-left"></a>
+                            <a href="#" class="icon-right"></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="footer-rights">
-                <p>© 2020, Все права защищены</p>
-                <div class="footer-right-right">
-                    <p>Сделано в рамках курса учебной платформы</p>
-                    <a href="#" target="_blank">Annblok</a>
+                <div class="footer-rights">
+                    <p>© 2020, Все права защищены</p>
+                    <div class="footer-rights-right">
+                        <p>Сделано в рамках курса учебной платформы</p>
+                        <a href="#" target="_blank">Annblok</a>
+                    </div>
                 </div>
             </div>
         </div>
