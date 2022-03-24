@@ -85,9 +85,10 @@ body {
 .banner {
     margin-bottom: 88px;
 }
-.banner-box {
-    display: flex;
+.container .banner {
     position: relative;
+}
+.banner-box {
     padding-top: 184px;
 }
 h1 {
@@ -222,15 +223,10 @@ h3 {
     margin-bottom: 0;
 }
 .menu-marathon {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    justify-content: space-between;
-    align-items: center;
-}
-.menu-marathon-item {
-    flex: 0 0 auto;
-    width: 32%;
-    height: 597px;
+    height: 600px;
 }
 .menu-marathon-item:nth-child(1) {
     background-image: url(..//images/maraphon.png);
@@ -394,7 +390,7 @@ h4 {
     margin-bottom: 0;
     max-height: 0;
     opacity: 0;
-    transition: .5s
+    transition: 0.5s linear;
 }
 .timetable-grid-item:hover .timetable-text-hidden {
     margin-top: 10px;
@@ -609,6 +605,23 @@ h4 {
     box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
 }
 .about-link:hover {
+    color: #FBF138;
+    background-color: #2B3541;
+    transition: .3s;
+    box-shadow: 0px 13px 24px rgba(70, 86, 106, 0.2);
+}
+.about-link-mobile {
+    color: #2B3541;
+    background-color: #FBF138;
+    padding: 22px 55px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
+}
+.about-link-mobile:hover {
     color: #FBF138;
     background-color: #2B3541;
     transition: .3s;
@@ -897,26 +910,24 @@ footer {
         margin-bottom: 18px;
     }
     .menu-marathon {
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .menu-marathon-item {
-        height: 28vw;
-    }
-    .menu-marathon-item:nth-child(3) {
-        height: 30vw;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 309px 336px;
     }
     .menu-marathon-item:nth-child(1) {
-        width: 49%;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
     }
     .menu-marathon-item:nth-child(2) {
-        width: 49%;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
     }
     .menu-marathon-item:nth-child(3) {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
         background-image: url(..//images/yoga-2.png);
-        background-size: cover;
-        background-position: center;
-        width: 100%;
+    }
+    .menu-marathon-gradient:hover .menu-marathon-button {
+        display: none;
     }
     .date {
         font-size: 12px;
@@ -927,12 +938,6 @@ footer {
     h3 {
         font-size: 16px;
         padding-left: 26px;
-    }
-    .menu-marathon-item:nth-child(3) .date {
-        padding-left: 22px;
-    }
-    .menu-marathon-item:nth-child(3) h3 {
-        padding-left: 22px;
     }
     .type {
         font-size: 12px;
@@ -1015,7 +1020,8 @@ footer {
     h4 {
         font-size: 16px;
     }
-    .timetable-content p {
+    .timetable-content p,
+    .timetable-content-active p {
         font-size: 12px;
     }
     .subscribe {
@@ -1125,4 +1131,168 @@ footer {
         padding-bottom: 46px;
     }
 }
+@media (max-width: 680px) {
+    .banner-bg-img {
+        width: 368px;
+        height: 315px;
+    }
+}
+@media (max-width: 640px) {
+    .banner-bg-img {
+        width: 374px;
+        height: 328px;
+    }    
+}
+@media (min-width: 587px) {
+    .about-link-mobile {
+        display: none;
+    }
+}
+@media (max-width: 586px) {
+    #events {
+        margin-bottom: 80px;
+    }
+    .menu-marathon-item:nth-child(3) {
+        background-position: 80%;
+    }
+    .timetable-title {
+        margin-bottom: 19px;
+        max-width: 214px;
+    }
+    .timetable-grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .timetable-grid-item {
+        height: 86px;
+        padding-left: 19px;
+        padding-right: 22px;
+        padding-top: 8px;
+    }
+    .timetable-grid-item:hover {
+        height: 120px;
+    }
+    .timetable-grid-item:nth-child(4) {
+        height: 182px;
+        order: -1;
+    }
+    .timetable-content {
+        display: grid;
+        grid-template-columns: repeat(2, 20% 80%);
+        align-items: center;
+    }
+    .timetable-content-active {
+        display: grid;
+        grid-template-columns: repeat(2, 20% 80%);
+        align-items: top;
+    }
+    .timetable-grid-item:nth-child(1) {
+        order: -1;
+    }
+    .timetable-grid-item:nth-child(2) {
+        order: 0;
+    }
+    .timetable-grid-item:nth-child(3) {
+        order: 1;
+    }
+    .timetable-grid-item:nth-child(5) {
+        order: 0;
+    }
+    .timetable-grid-item:nth-child(6) {
+        order: 1;
+    }
+    .timetable-content img {
+        margin-bottom: 0;
+    }
+    .timetable-grid-image-1 {
+        width: 39px;
+        height: 39px;
+    }
+    .timetable-grid-image-2 {
+        width: 23px;
+        height: 45px;
+    }
+    .timetable-grid-image-3 {
+        width: 46px;
+        height: 25px;
+    }
+    .timetable-grid-image-4 {
+        width: 34px;
+        height: 53px;
+    }
+    .timetable-grid-image-5 {
+        width: 39px;
+        height: 37px;
+    }
+    .timetable-grid-image-6 {
+        width: 35px;
+        height: 40px;
+    }
+    .timetable-content-text {
+        padding-bottom: 5px;
+    }
+    .timetable-text-hidden {
+        margin-bottom: 5px;
+    }
+    .about-box {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-link {
+        display: none;
+    }
+    .about-image {
+        order: 1;
+    }
+    .about-advantages {
+        gap: 25px;
+    }
+    .about-advantages-item {
+        width: 100%;
+    }
+    .about-description {
+        margin-bottom: 37px;
+    }
+    .about-link-mobile {
+        display: visible;
+        margin-top: 22px;
+        margin-bottom: 40px;
+    }
+    .about-image {
+        height: 212px;
+    }
+    #about {
+        margin-bottom: 30px;
+    }
+    .footer {
+        padding-top: 50px;
+    }
+    .footer-item:nth-child(1) {
+        display: block;
+        margin-bottom: 23px;
+    }
+    .footer-logo {
+        margin: 0 auto 40px auto;
+    }
+    .footer-nav {
+        padding-left: 0;
+        justify-content: space-between;
+        gap: 14px;
+    }
+    .footer-item:nth-child(2) {
+        justify-content: space-between;
+        margin-bottom: 41px;
+    }
+    .footer-mail::before {
+        width: 20px;
+        height: 20px;
+        left: -5px;
+        top: -14px;
+    }
+    .footer-rights {
+        display: block;
+        text-align: center;
+    } 
+}
+
 
