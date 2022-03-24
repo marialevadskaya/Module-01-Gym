@@ -2,7 +2,7 @@ body {
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
     color: #2B3541;
-    background-color: FEFCFE;
+    background-color: #FEFCFE;
 }
 .container {
     max-width: 1140px;
@@ -497,9 +497,9 @@ h4 {
     display: flex;
     gap: 1px;
     align-items: center;
-    margin-top: 4px;
+    margin-top: 14px;
 }
-.agreement-label p,
+.agreement-label span,
 .agreement-label a {
     font-weight: 400;
     font-size: 11px;
@@ -760,7 +760,6 @@ footer {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    background-position: contain;
     margin-left: 57px;
 }
 .modal {
@@ -828,7 +827,7 @@ footer {
         display: none;
     }
     .header-nav {
-        display: visible;
+        display: flex;
     }
     .button-plus {
         display: none;
@@ -839,7 +838,7 @@ footer {
 }
 @media (max-width: 1112px) {
     .burger {
-        display: visible;
+        display: block;
     }
     .header .header-nav {
         display: none;
@@ -946,12 +945,11 @@ footer {
         right: auto;
     }
     .button-plus {
-        display: visible;
+        display: block;
         width: 32px;
         height: 30px;
         background-image: url(..//images/svg/add.svg);
         background-repeat: no-repeat;
-        background-position: contain;
         border: none;
         position: absolute;
         bottom: 0;
@@ -1047,7 +1045,7 @@ footer {
         display: none;
     }
     .agreement-adaptive {
-        display: visible;
+        display: block;
         margin-bottom: 32px;
     }
     .form-items {
@@ -1184,7 +1182,7 @@ footer {
     .timetable-content-active {
         display: grid;
         grid-template-columns: repeat(2, 20% 80%);
-        align-items: top;
+        align-items: flex-start;
     }
     .timetable-grid-item:nth-child(1) {
         order: -1;
@@ -1254,7 +1252,7 @@ footer {
         margin-bottom: 37px;
     }
     .about-link-mobile {
-        display: visible;
+        display: block;
         margin-top: 22px;
         margin-bottom: 40px;
     }
