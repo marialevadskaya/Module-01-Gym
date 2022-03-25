@@ -243,7 +243,7 @@ h3 {
     position: relative;
 }
 .menu-marathon-item:nth-child(3) {
-    background-image: url(..//images/yoga.jpg);
+    background-image: url(..//images/yoga.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
