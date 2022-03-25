@@ -448,6 +448,18 @@ h4 {
     padding: 10px 15px;
     border: 1px solid #fff;
 }
+.input-email::-webkit-input-placeholder {
+    color: rgba(43, 53, 65, .3);
+  }
+.input-email::-moz-placeholder {
+    color: rgba(43, 53, 65, .3);
+  }
+.input-email:-ms-input-placeholder {
+    color: rgba(43, 53, 65, .3);
+  }
+.input-email::-ms-input-placeholder {
+    color: rgba(43, 53, 65, .3);
+  }
 .input-email::placeholder {
     color: rgba(43, 53, 65, .3);
   }
@@ -1147,11 +1159,44 @@ footer {
     }
 }
 @media (max-width: 586px) {
+    .banner-bg-img {
+        width: 350px;
+        height: 320px;
+    }
+    .banner-bg {
+        max-height: 414px;
+    }
+    .banner-link {
+        padding: 22px 20px;
+    }
     #events {
-        margin-bottom: 80px;
+        margin-bottom: 75px;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    .menu-marathon {
+        gap: 12px;
     }
     .menu-marathon-item:nth-child(3) {
         background-position: 80%;
+    }
+    .date {
+        padding-top: 8px;
+        padding-left: 20px;
+    }
+    h3 {
+        padding-left: 20px;
+    }
+    .type {
+        padding: 7px 15px;
+    }
+    .button-plus {
+        width: 29px;
+        height: 27px;    
+    }
+    #timetable {
+        margin-bottom: 81px;
     }
     .timetable-title {
         margin-bottom: 19px;
@@ -1165,7 +1210,7 @@ footer {
         height: 86px;
         padding-left: 19px;
         padding-right: 22px;
-        padding-top: 8px;
+        padding-top: 6px;
     }
     .timetable-grid-item:hover {
         height: 120px;
@@ -1232,6 +1277,15 @@ footer {
     .timetable-text-hidden {
         margin-bottom: 5px;
     }
+    .form-items {
+        padding-top: 31px;
+    }
+    .agreement-adaptive {
+        margin-bottom: 46px;
+    }
+    .subscribe {
+        margin-bottom: 40px;
+    }
     .about-box {
         display: flex;
         flex-direction: column;
@@ -1254,16 +1308,17 @@ footer {
     .about-link-mobile {
         display: block;
         margin-top: 22px;
-        margin-bottom: 40px;
+        margin-bottom: 41px;
+        padding: 24px 55px;
     }
     .about-image {
-        height: 212px;
+        height: 206px;
     }
     #about {
-        margin-bottom: 30px;
+        margin-bottom: 38px;
     }
     .footer {
-        padding-top: 50px;
+        padding-top: 42px;
     }
     .footer-item:nth-child(1) {
         display: block;
@@ -1290,7 +1345,105 @@ footer {
     .footer-rights {
         display: block;
         text-align: center;
-    } 
+    }
+    .footer-rights-right {
+        display: block;
+    }
 }
+@media (max-width: 540px) {
+    .container {
+        max-width: 340px;
+    }
+    .banner {
+        margin-bottom: 18px;
+    }
+    .banner-arrow-down {
+        display: none;
+    }
+    .banner-content {
+        margin-bottom: 32px;
+    }
+    .banner-description {
+        margin-bottom: 40px;
+    }
+    .banner-link {
+        display: block;
+        max-width: 100%;
+        text-align: center;
+    }
+    .banner-bg {
+        position: static;
+        max-width: 100%;
+        height: 60vw;       
+    }
+    .banner-bg-img {
+        width: 93%;
+        height: auto;
+        right: auto;
+        bottom: 0;
+        top: auto;
+        z-index: 0;
+    }
+    .banner-bg-gradient-left {
+        position: static;
+        height: 100%;
+    }
+    .banner-bg-gradient-right {
+        position: static;
+        height: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .banner-bg {
+        position: static;
+        max-width: 100%;
+        height: 70vw;       
+    }
+}
+@media (max-width: 414px) {
+    .banner-bg {
+        position: static;
+        max-width: 100%;
+        height: 81vw;       
+    }
+}
+@media (max-width: 390px) {
+    .burger {
+        margin-left: 30px;
+    }
+   h1 {
+       font-size: 24px;
+   }
+}
+@media (max-width: 360px) {
+   h1 {
+       font-size: 22px;
+   }
+   .date {
+       padding-left: 10px;
+   }
+   h3 {
+       padding-left: 10px;
+   }
+   .form-email {
+       display: block;
+   }
+   .input-email {
+        width: 260px;
+        height: 55px;
+   }
+   .form-button {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+   }
+   .agreement-label {
+       display: block;
+   }
+   .agreement-label a {
+        margin-left: 0px;
+   }
+}
+
 
 
